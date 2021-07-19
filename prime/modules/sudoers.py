@@ -7,7 +7,7 @@ import psutil
 from pyrogram import filters
 from pyrogram.errors import FloodWait
 
-from prime import (BOT_ID, GBAN_LOG_GROUP_ID, SUDOERS, USERBOT_USERNAME,
+from prime import (BOT_ID, GBAN_LOG_GROUP_ID, SUDOERS, USERBOT_USERNAME, BOT_NAME ,
                  app, bot_start_time)
 from prime.core.decorators.errors import capture_err
 from prime.utils import formatter
