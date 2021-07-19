@@ -36,6 +36,7 @@ if HEROKU:
             "SPAM_CHECK_EXCEPTION_GROUPS", ""
         ).split()
     )
+    RSS_DELAY = 30
 else:
     BOT_TOKEN = "467677575:YZfaakjwd545dfg-N6JStihhuw5gQeZHntc"
     API_ID = 123456
@@ -57,3 +58,4 @@ else:
     SPAM_CHECK_EXCEPTION_GROUPS = (
         []
     )  # Leave it empty if you don't know about it
+    RSS_DELAY = 30  # In seconds
