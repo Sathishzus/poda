@@ -18,6 +18,34 @@ from prime.utils.dbfunctions import (add_gban_user, get_served_chats,
 __MODULE__ = "Sudoers"
 
 
+# Stats Module
+
+
+async def bot_sys_stats():
+    bot_uptime = int(time.time() - bot_start_time)
+    cpu = psutil.cpu_percent()
+    mem = psutil.virtual_memory().percent
+    disk = psutil.disk_usage("/").percent
+    process = psutil.Process(os.getpid())
+    stats = f"""
+{USERBOT_USERNAME}
+------------------
+UPTIME: {formatter.get_readable_time((bot_uptime))}
+BOT: {round(process.memory_info()[0] / 1024 ** 2)} MB
+CPU: {cpu}%
+RAM: {mem}%
+DISK: {disk}%
+"""
+    return stats
+
+
+@app.on_message(filters.user(SUDOERS) & filters.command("system"))
+@capture_err
+async def get_stats(_, message):
+    stats = await bot_sys_stats()
+    await message.reply_text(stats)
+
+
 
 
 # Gban
