@@ -6,7 +6,7 @@ from pyrogram.types import CallbackQuery, Message
 from prime import app, arq
 from prime.core.keyboard import ikb
 from prime import BOT_ID, BOT_NAME ,SUPPORT_GROUP
-
+SUPPORT_GROUP = "JokerSupportZ"
 __MODULE__ = "Proxy"
 __HELP__ = (
     "/proxy - Get socks5 proxy which you can"
