@@ -2,11 +2,11 @@ import asyncio
 import os
 import subprocess
 import time
-
 import psutil
 
 from pyrogram import filters
 
+from pyrogram.errors import FloodWait
 from prime.utils import formatter
 from prime import BOT_ID, BOT_NAME, SUDOERS, app ,bot_start_time
 from prime.core.decorators.errors import capture_err
