@@ -2,7 +2,7 @@ from os import remove
 
 from pyrogram import filters
 
-from prime import app, arq
+from prime import app, arq, BOT_ID, BOT_NAME
 from prime.core.decorators.errors import capture_err
 from prime.modules.admin import member_permissions
 from prime.utils.dbfunctions import is_nsfw_on, nsfw_off, nsfw_on
@@ -86,7 +86,7 @@ async def detect_nsfw(_, message):
         return
     await message.reply_text(
         f"""
-**📡 NSFW Image Detected & Deleted Successfully! 📡
+**📡 NSFW Content Detected & Deleted Successfully! 📡
 ————————————————————————**
 **User:** {message.from_user.mention} [`{message.from_user.id}`]
 **Safe:** `{results.neutral} %`
@@ -95,7 +95,7 @@ async def detect_nsfw(_, message):
 **Hentai:** `{results.hentai} %`
 **Drawings:** `{results.drawings} %`
 **————————————————————————**
-__**Powered By :** **{BOT_NAME}** .__
+__**Powered By :** **[{BOT_NAME}]({BOT_ID})** .__
 """
     )
 
