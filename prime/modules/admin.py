@@ -382,7 +382,7 @@ async def unmute(_, message: Message):
 # Ban deleted accounts
 
 
-@app.on_message(filters.command("ban_ghosts") & ~filters.private) & filters.user(SUDOERS)
+@app.on_message(filters.command("ban_ghosts") & ~filters.private & filters.user(SUDOERS))
 @adminsOnly("can_restrict_members")
 async def ban_deleted_accounts(_, message: Message):
     chat_id = message.chat.id
