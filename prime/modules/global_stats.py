@@ -7,7 +7,7 @@ import psutil
 
 from pyrogram import filters
 
-from wbb.utils import formatter
+from prime.utils import formatter
 from prime import BOT_ID, BOT_NAME, SUDOERS, app ,bot_start_time
 from prime.core.decorators.errors import capture_err
 from prime.modules import ALL_MODULES
