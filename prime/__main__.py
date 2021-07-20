@@ -9,7 +9,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from prime import (BOT_NAME, BOT_USERNAME, USERBOT_NAME, aiohttpsession,
                  app)
 from prime.modules import ALL_MODULES
-from prime.modules.sudoers import bot_sys_stats
+from prime.modules.global_stats import bot_sys_stats
 from prime.utils import paginate_modules
 from prime.utils.dbfunctions import clean_restart_stage
 
