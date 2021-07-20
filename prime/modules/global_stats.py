@@ -48,7 +48,9 @@ async def global_stats(_, message):
 
 👥__**Approximate Groups Count** **:** **{len(served_chats)*1}**__
 
-⏳ __**Estimated Time** **:** **{len(served_chats)*2}+ Seconds.**__""",
+⏳ __**Estimated Time in Sec** **:** **{len(served_chats)*2}+ Seconds.**__
+
+⏰ __**Estimated Time in Min** **:** **{len(served_chats)/60}+ Minutes.**__""",
         disable_web_page_preview=True,
     )
     for served_chat in served_chats:
@@ -98,17 +100,11 @@ async def global_stats(_, message):
 **Global Stats of {BOT_NAME}**:
 
 🔇 **{gbans}** Globally banned users.
-
 🔞 **{blacklist_filters_count}** Blacklist Filters, Across **{blacklist_filters_chats_count}** chats.
-
 ♻️ **{filters_count}** Filters, Across **{filters_chats_count}** chats.
-
 ⛔️ **{warns_count}** Warns, Across **{warns_chats_count}** chats.
-
 👍 **{karmas_count}** Karma, Across **{karmas_chats_count}** chats.
-
 🧍‍♂️ **{len(served_users)}** Users, Across **{len(served_chats)}** chats.
-
 🧭 UPTIME: {formatter.get_readable_time((bot_uptime))}
 🤖 BOT: {round(process.memory_info()[0] / 1024 ** 2)} MB
 🖥 CPU: {cpu}%
