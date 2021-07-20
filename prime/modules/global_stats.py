@@ -46,7 +46,9 @@ async def global_stats(_, message):
 
 🖥 __**Database Name:Mongo DB**__
 
-⏳ __**Should Take {len(served_chats)*2}+ Seconds.**__""",
+👥__**Approximate Groups Count** **:** **{len(served_chats)*1}**__
+
+⏳ __**Estimated Time** **:** **{len(served_chats)*2}+ Seconds.**__""",
         disable_web_page_preview=True,
     )
     for served_chat in served_chats:
@@ -107,11 +109,11 @@ async def global_stats(_, message):
 
 🧍‍♂️ **{len(served_users)}** Users, Across **{len(served_chats)}** chats.
 
-UPTIME: {formatter.get_readable_time((bot_uptime))}
-BOT: {round(process.memory_info()[0] / 1024 ** 2)} MB
-CPU: {cpu}%
-RAM: {mem}%
-DISK: {disk}%
+🧭 UPTIME: {formatter.get_readable_time((bot_uptime))}
+🤖 BOT: {round(process.memory_info()[0] / 1024 ** 2)} MB
+🖥 CPU: {cpu}%
+📼 RAM: {mem}%
+💾 DISK: {disk}%
 
 """
     await m.edit(msg, disable_web_page_preview=True)
