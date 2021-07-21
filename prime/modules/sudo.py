@@ -87,9 +87,8 @@ async def userdel(_, message: Message):
 
 
 @app2.on_message(
-    filters.command("smartsudolist")
+    filters.command("sudoers", prefixes=USERBOT_PREFIX)
     & filters.user(SUDOERS)
-    & ~filters.edited
 )
 @capture_err
 async def sudoers_list(_, message: Message):
