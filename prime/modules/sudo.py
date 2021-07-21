@@ -23,10 +23,10 @@ sudo users can do anything with your account, they
 can even delete your account.
 """
 
+
 @app2.on_message(
-    filters.command("smartaddsudo")
+    filters.command("smartaddsudo", prefixes=USERBOT_PREFIX)
     & filters.user(SUDOERS)
-    & ~filters.edited
 )
 @capture_err
 async def useradd(_, message: Message):
@@ -57,10 +57,10 @@ async def useradd(_, message: Message):
     )
 
 
+
 @app2.on_message(
-    filters.command("smartdelsudo")
+    filters.command("smartdelsudo", prefixes=USERBOT_PREFIX)
     & filters.user(SUDOERS)
-    & ~filters.edited
 )
 @capture_err
 async def userdel(_, message: Message):
