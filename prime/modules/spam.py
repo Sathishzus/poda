@@ -2,7 +2,7 @@ from pyrogram import filters
 from pyrogram.types import (CallbackQuery, InlineKeyboardButton,
                             InlineKeyboardMarkup, Message)
 
-from prime import LOG_GROUP_ID, SUDOERS, USERBOT_PREFIX, app, app2, arq
+from prime import LOG_GROUP_ID, SUDOERS, USERBOT_PREFIX, app, app2, arq, BOT_NAME
 from prime.core.decorators.permissions import adminsOnly
 from prime.modules.admin import list_admins, member_permissions
 from prime.modules.trust import get_spam_data
@@ -38,11 +38,36 @@ async def spam_protection_func(_, message: Message):
         return
     if user.id in (await list_admins(chat_id)):
         return
-    
+    return
+    text = f"""
+🚨  **SPAM DETECTED**  🚨
+**User:** {user.mention}
+**Message:** [Link]({message.link})
+**Spam Probability:** {data.spam_probability} %
+**Action:** Alerted
+"""
+    keyboard = InlineKeyboardMarkup(
+        [
+            [
+                InlineKeyboardButton(
+                    text="Yes it's Spam", callback_data="s_p_spam"
+                ),
+                InlineKeyboardButton(
+                    text="No, it's not Spam",
+                    callback_data="s_p_ham",
+                ),
+            ],
+        ]
+    )
+    await message.reply_text(
+        text=text,
+        reply_markup=keyboard,
+        disable_web_page_preview=True,
+    )
 
 
 dev_forward = (
-    "If you're not a developer of 🦊 𝔽𝕠𝕩 𝕏 𝔹𝕠𝕥, forward this message to devs, "
+    f"If you're not a developer of {BOT_NAME}, forward this message to devs, "
     + "so that they can use it to improve spam protection algorithm."
 )
 
