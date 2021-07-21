@@ -85,7 +85,7 @@ async def locks_func(_, message):
         await message.reply_text("Locked Everything.")
 
 
-@app.on_message(filters.command("locks") & ~filters.private)
+@app.on_message(filters.command("locsks") & ~filters.private)
 @capture_err
 async def locktypes(_, message):
     permissions = await current_chat_permissions(message.chat.id)
