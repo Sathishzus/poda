@@ -79,7 +79,7 @@ async def inline_help_func(__HELP__):
             title="Github Repo",
             description="Get Github Respository Of Bot.",
             input_message_content=InputTextMessageContent(
-                "https://telegra.ph/file/a6fa0ea50b6b23080ad74.jpg"
+                "https://github.com/Sathishzus/Optimus-Prime"
             ),
             thumb_url="https://telegra.ph/file/a6fa0ea50b6b23080ad74.jpg",
         ),
@@ -100,7 +100,7 @@ async def alive_function(answers):
     )
 
     msg = f"""
-**[Powered By FoxXBots✨](https://telegra.ph/file/a6fa0ea50b6b23080ad74.jpg):**
+**[Powered By FoxXBots✨](https://github.com/Sathishzus/Optimus-Prime):**
 **MainBot:** `{bot_state}`
 **UserBot:** `{ubot_state}`
 **Python:** `{pyver.split()[0]}`
