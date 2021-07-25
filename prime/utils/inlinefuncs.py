@@ -72,16 +72,16 @@ async def inline_help_func(__HELP__):
             input_message_content=InputTextMessageContent(
                 "Click A Button To Get Started."
             ),
-            thumb_url="https://telegra.ph/file/a6fa0ea50b6b23080ad74.jpg",
+            thumb_url="https://hamker.me/cy00x5x.png",
             reply_markup=buttons,
         ),
         InlineQueryResultArticle(
             title="Github Repo",
             description="Get Github Respository Of Bot.",
             input_message_content=InputTextMessageContent(
-                "https://github.com/Sathishzus/Optimus-Prime"
+                "https://github.com/thehamkercat/WilliamButcherBot"
             ),
-            thumb_url="https://telegra.ph/file/a6fa0ea50b6b23080ad74.jpg",
+            thumb_url="https://hamker.me/gjc9fo3.png",
         ),
     ]
     answerss = await alive_function(answerss)
@@ -100,7 +100,7 @@ async def alive_function(answers):
     )
 
     msg = f"""
-**[Powered By FoxXBots✨](https://github.com/Sathishzus/Optimus-Prime):**
+**[William✨](https://github.com/thehamkercat/WilliamButcherBot):**
 **MainBot:** `{bot_state}`
 **UserBot:** `{ubot_state}`
 **Python:** `{pyver.split()[0]}`
@@ -113,7 +113,7 @@ async def alive_function(answers):
         InlineQueryResultArticle(
             title="Alive",
             description="Check Bot's Stats",
-            thumb_url="https://telegra.ph/file/a6fa0ea50b6b23080ad74.jpg",
+            thumb_url="https://static2.aniimg.com/upload/20170515/414/c/d/7/cd7EEF.jpg",
             input_message_content=InputTextMessageContent(
                 msg, disable_web_page_preview=True
             ),
