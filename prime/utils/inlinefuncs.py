@@ -73,16 +73,16 @@ async def inline_help_func(__HELP__):
             input_message_content=InputTextMessageContent(
                 "Click A Button To Get Started."
             ),
-            thumb_url="https://hamker.me/cy00x5x.png",
+            thumb_url="https://telegra.ph/file/a6fa0ea50b6b23080ad74.jpg",
             reply_markup=buttons,
         ),
         InlineQueryResultArticle(
             title="Github Repo",
             description="Get Github Respository Of Bot.",
             input_message_content=InputTextMessageContent(
-                "404"
+                "https://t.me/foxxbotofficials"
             ),
-            thumb_url="https://hamker.me/gjc9fo3.png",
+            thumb_url="https://telegra.ph/file/a6fa0ea50b6b23080ad74.jpg",
         ),
     ]
     answerss = await alive_function(answerss)
@@ -101,7 +101,6 @@ async def alive_function(answers):
     )
 
     msg = f"""
-
 **MainBot:** `{bot_state}`
 **UserBot:** `{ubot_state}`
 **Python:** `{pyver.split()[0]}`
@@ -114,7 +113,7 @@ async def alive_function(answers):
         InlineQueryResultArticle(
             title="Alive",
             description="Check Bot's Stats",
-            thumb_url="https://static2.aniimg.com/upload/20170515/414/c/d/7/cd7EEF.jpg",
+            thumb_url="https://telegra.ph/file/a6fa0ea50b6b23080ad74.jpg",
             input_message_content=InputTextMessageContent(
                 msg, disable_web_page_preview=True
             ),
@@ -693,8 +692,8 @@ async def pmpermit_func(answers, user_id, victim):
 
 
 async def ping_func(answers):
+    ping = Ping(ping_id=app.rnd_id())
     t1 = time()
-    ping = Ping(ping_id=randint(696969, 6969696))
     await app.send(ping)
     t2 = time()
     ping = f"{str(round((t2 - t1) * 1000, 2))} ms"
