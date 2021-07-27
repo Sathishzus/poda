@@ -2,15 +2,15 @@ from pyrogram import filters
 from pyrogram.types import (CallbackQuery, InlineKeyboardButton,
                             InlineKeyboardMarkup, Message)
 
-from wbb import LOG_GROUP_ID, SUDOERS, USERBOT_PREFIX, app, app2, arq
-from wbb.core.decorators.permissions import adminsOnly
-from wbb.modules.admin import list_admins, member_permissions
-from wbb.modules.trust import get_spam_data
-from wbb.modules.userbot import edit_or_reply
-from wbb.utils.dbfunctions import (is_spam_detection_on,
+from prime import LOG_GROUP_ID, SUDOERS, USERBOT_PREFIX, app, app2, arq
+from prime.core.decorators.permissions import adminsOnly
+from prime.modules.admin import list_admins, member_permissions
+from prime.modules.trust import get_spam_data
+from prime.modules.userbot import edit_or_reply
+from prime.utils.dbfunctions import (is_spam_detection_on,
                                    spam_detection_off,
                                    spam_detection_on)
-from wbb.utils.filter_groups import spam_protection_group
+from prime.utils.filter_groups import spam_protection_group
 
 __MODULE__ = "AntiSpam"
 __HELP__ = """
