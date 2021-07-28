@@ -96,6 +96,7 @@ async def detect_nsfw(_, message):
 **Drawings:** `{results.drawings} %`
 **————————————————————————**
 __**Powered By :** **[{BOT_NAME}]({BOT_ID})** .__
+**To Disable this use :"/antinsfw disable"**
 """
     )
 
