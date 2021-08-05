@@ -89,7 +89,7 @@ async def get_chat_info(chat):
     return [caption, photo_id]
 
 
-@app.on_message(filters.command("info"))
+@app.on_message(filters.command("infos"))
 @capture_err
 async def info_func(_, message: Message):
     if message.reply_to_message:
