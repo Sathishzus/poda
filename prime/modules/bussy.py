@@ -14,7 +14,7 @@ __HELP__ = (
 @app.on_message(filters.command("gban") & ~filters.edited)
 @capture_err
 async def repo(_, message):
-    text = f"""Joker Gban(Global Banning system is temporarily unavailable. Untill further notice."""
+    text = f"""Joker Gban(Global Banning) system is temporarily unavailable. Untill further notice."""
     await app.send_message(
         message.chat.id, text=text, disable_web_page_preview=True
     )
