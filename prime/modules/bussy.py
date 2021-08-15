@@ -11,7 +11,7 @@ __HELP__ = (
 )
 
 
-@app.on_message(filters.command("single") & ~filters.edited)
+@app.on_message(filters.command("iloveyou") & ~filters.edited)
 @capture_err
 async def repo(_, message):
     text = f"""Kari kolambula ealumbu un kathaiea vaeanam kealambu"""
