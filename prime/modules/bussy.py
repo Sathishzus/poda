@@ -11,11 +11,10 @@ __HELP__ = (
 )
 
 
-@app.on_message(filters.command("gban") & ~filters.edited)
+@app.on_message(filters.command("single") & ~filters.edited)
 @capture_err
 async def repo(_, message):
-    text = f"""Joker Gban(Global Banning)
- system is now turned off  so it'll be  temporarily unavailable. Untill further notice"""
+    text = f"""Kari kolambula ealumbu un kathaiea vaeanam kealambu"""
     await app.send_message(
         message.chat.id, text=text, disable_web_page_preview=True
     )
