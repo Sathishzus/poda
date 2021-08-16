@@ -19,7 +19,7 @@ You can use markdown or html to save text too."""
 
 
 @app.on_message(
-    filters.command("filteer") & ~filters.edited & ~filters.private
+    filters.command("filter") & ~filters.edited & ~filters.private
 )
 @adminsOnly("can_change_info")
 async def save_filters(_, message):
@@ -52,7 +52,7 @@ async def save_filters(_, message):
 
 
 @app.on_message(
-    filters.command("filteers") & ~filters.edited & ~filters.private
+    filters.command("filters") & ~filters.edited & ~filters.private
 )
 @capture_err
 async def get_filterss(_, message):
@@ -67,7 +67,7 @@ async def get_filterss(_, message):
 
 
 @app.on_message(
-    filters.command("stoep") & ~filters.edited & ~filters.private
+    filters.command("stop") & ~filters.edited & ~filters.private
 )
 @adminsOnly("can_change_info")
 async def del_filter(_, message):
