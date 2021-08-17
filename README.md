@@ -1,4 +1,4 @@
-# ✨ Prime Pack ✨
+# ✨ Prime Pack ✨
 ### Telegram Group Manager Bot + Userbot Written In Python Using Pyrogram.
 
 
