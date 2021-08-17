@@ -13,13 +13,7 @@ from pyrogram.types import (ChatPermissions, InlineKeyboardButton,
 from prime import SUDOERS, WELCOME_DELAY_KICK_SEC, app
 from prime.core.decorators.errors import capture_err
 from prime.core.decorators.permissions import adminsOnly
-from prime.utils.dbfunctions import (captcha_off, captcha_on,
-                                   del_welcome, get_captcha_cache,
-                                   get_welcome, is_captcha_on,
-                                   is_gbanned_user, set_welcome,
-                                   update_captcha_cache)
-from prime.utils.filter_groups import welcome_captcha_group
-from prime.utils.functions import generate_captcha
+
 
 __MODULE__ = "Greetings"
 __HELP__ = """
